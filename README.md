@@ -1,6 +1,6 @@
 ## Opengrapher
 
-##### util for parsing the Open Graph tags from url
+##### utility for parsing the Open Graph tags from url
 
 _(read more about the specification at http://ogp.me/)_
 
