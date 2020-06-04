@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipython = "*"
+flake8 = "*"
+mock = "*"
+opengrapher = {editable = true,path = "."}
+
+[packages]
+beautifulsoup4 = "*"
+requests = "*"
+opengrapher = {editable = true,path = "."}
+
+[requires]
+python_version = "3.4"
