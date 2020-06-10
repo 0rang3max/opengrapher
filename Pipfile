@@ -7,7 +7,6 @@ verify_ssl = true
 ipython = "*"
 flake8 = "*"
 mock = "*"
-opengrapher = {editable = true,path = "."}
 twine = ">=1.11.0"
 wheel = ">=0.31.0"
 setuptools = ">=38.6.0"

@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-TAGS = ["title", "type", "image", "url", "description"]
+PARSE_TAGS = ["url", "title", "type", "image", "description"]
 
 
 class NoHtmlProvided(Exception):
@@ -23,9 +23,7 @@ def _parse_tag(soup, tag):
     return elem["content"]
 
 
-def parse(url):
-    url_tag = "url"
-
+def parse(url, parse_tags=PARSE_TAGS):
     r = requests.get(url)
     if not r.ok:
         raise BadResponse(r.status_code)
@@ -33,10 +31,10 @@ def parse(url):
         raise NoHtmlProvided
 
     soup = BeautifulSoup(r.content, features="html.parser")
-
-    parse_tags = TAGS.copy()
-    parse_tags.remove(url_tag)
-    parsed_data = {url_tag: url}
+    parsed_data = {}
     for tag in parse_tags:
-        parsed_data[tag] = _parse_tag(soup, tag)
+        tag_data = _parse_tag(soup, tag)
+        if tag_data:
+            parsed_data[tag] = _parse_tag(soup, tag)
+
     return parsed_data
