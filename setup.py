@@ -25,7 +25,7 @@ setup(
     author="Maxim Semenov",
     author_email="0rang3max@gmail.com",
     url="https://github.com/0rang3max/opengrapher",
-    download_url="https://github.com/0rang3max/opengrapher/archive/v_01.tar.gz",
+    download_url="https://github.com/0rang3max/opengrapher/archive/v0.2.tar.gz",
     license="MIT",
     include_package_data=True,
     python_requires=">=3.4",
