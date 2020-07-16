@@ -23,8 +23,11 @@ def _parse_tag(soup, tag):
     return elem["content"]
 
 
-def parse(url, parse_tags=PARSE_TAGS):
-    r = requests.get(url)
+def parse(url, parse_tags=PARSE_TAGS, user_agent=None):
+    headers = {}
+    if user_agent is not None:
+        headers["user-agent"] = user_agent
+    r = requests.get(url, headers=headers)
     if not r.ok:
         raise BadResponse(r.status_code)
     if not r.content:
