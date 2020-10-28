@@ -8,7 +8,7 @@ with open("README.md") as f:
 setup(
     name="opengrapher",
     packages=["opengrapher"],
-    version="0.2.2",
+    version="0.3",
     description="Utility for parsing the OpenGraph tags",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -25,7 +25,7 @@ setup(
     author="Maxim Semenov",
     author_email="0rang3max@gmail.com",
     url="https://github.com/0rang3max/opengrapher",
-    download_url="https://github.com/0rang3max/opengrapher/archive/v0.2.tar.gz",
+    download_url="https://github.com/0rang3max/opengrapher/archive/v0.3.tar.gz",
     license="MIT",
     include_package_data=True,
     python_requires=">=3.4",
