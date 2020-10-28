@@ -15,6 +15,7 @@ setuptools = ">=38.6.0"
 beautifulsoup4 = "*"
 requests = "*"
 opengrapher = {editable = true,path = "."}
+twine = "*"
 
 [requires]
-python_version = "3.4"
+python_version = "3.6"
