@@ -8,7 +8,7 @@ with open("README.md") as f:
 setup(
     name="opengrapher",
     packages=["opengrapher"],
-    version="0.2",
+    version="0.2.2",
     description="Utility for parsing the OpenGraph tags",
     long_description=long_description,
     long_description_content_type="text/markdown",

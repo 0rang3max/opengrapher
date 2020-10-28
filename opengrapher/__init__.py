@@ -23,8 +23,8 @@ def _parse_tag(soup, tag):
     return elem["content"]
 
 
-def parse(url, parse_tags=PARSE_TAGS):
-    r = requests.get(url)
+def parse(url, parse_tags=PARSE_TAGS, proxies=None):
+    r = requests.get(url, proxies=proxies)
     if not r.ok:
         raise BadResponse(r.status_code)
     if not r.content:
