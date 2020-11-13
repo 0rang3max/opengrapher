@@ -53,3 +53,17 @@ You can pass a specific list of tags to `parse` function if you want:
 ```
 
 > Note that all tags will be transformed to "og:{tag}" format, as it stated in opengraph notation
+
+Opengrapher is based on requests lib. If you need to modify your GET request - you can pass arguments through `parse` function via `requests_kwargs` option:
+```python
+
+   >>> custom_requests_kwargs = {
+      'headers': {
+         'User-Agent':'Mozilla/5.0'
+      },
+   }
+
+   >>> opengrapher.parse('https://www.imdb.com/title/tt0110912', requests_kwargs=custom_requests_kwargs)
+```
+
+> Tip: passing custom User-Agent header can solve [problems with some sites](https://stackoverflow.com/a/64332370/11837633)
